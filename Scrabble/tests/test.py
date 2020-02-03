@@ -16,7 +16,7 @@ def test_readf_empty_file():
 
 def test_readf_single_word_file():
     # Given
-    file_path_single = "./Scrabble/data/data/test-single-word-file.txt"
+    file_path_single = "./Scrabble/data/test-single-word-file.txt"
     # When
     fp = FileParser()
     word_list = fp.readf(file_path_single)
