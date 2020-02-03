@@ -1,0 +1,22 @@
+on:
+    pull_request:
+      branches:
+        - master
+    push:
+      branches:
+        - dev
+  jobs:
+    build:
+      strategy:
+        matrix:
+          os: [macOS-latest, ubuntu-latest]
+          python-version: [3.7]
+      runs-on: ${{matrix.os}}
+      steps:
+        - uses: actions/checkout@v1
+        - uses: actions/setup-python@v1
+          with:
+            python-version: ${{matrix.python-version}}
+        - run: pip install --upgrade pip
+        - run: pip install pytest
+        - run: pytest ./Scrabble/tests/test.py -v
