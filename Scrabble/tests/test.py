@@ -7,7 +7,7 @@ from scrabble.Scrabble import Scrabble
 # Tests for FileParser Class
 def test_readf_empty_file():
     # Given
-    file_path_empty = "../data/test-empty-word-file.txt"
+    file_path_empty = "./Scrabble/data/test-empty-word-file.txt"
     fp = FileParser()
     # Then
     with pytest.raises(IOError):
@@ -16,7 +16,7 @@ def test_readf_empty_file():
 
 def test_readf_single_word_file():
     # Given
-    file_path_single = "../data/test-single-word-file.txt"
+    file_path_single = "./Scrabble/data/data/test-single-word-file.txt"
     # When
     fp = FileParser()
     word_list = fp.readf(file_path_single)
@@ -26,7 +26,7 @@ def test_readf_single_word_file():
 
 def test_readf_invalid_char_file():
     # Given
-    file_path_single = "../data/test-invalid-word-file.txt"
+    file_path_single = "./Scrabble/data/test-invalid-word-file.txt"
     # When
     fp = FileParser()
     word_list = fp.readf(file_path_single)
