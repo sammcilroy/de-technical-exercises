@@ -1,11 +1,12 @@
 on:
-    pull_request:
-      branches:
-        - master
-    push:
-      branches:
-        - dev
-  jobs:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - dev
+
+jobs:
     build:
       strategy:
         matrix:
