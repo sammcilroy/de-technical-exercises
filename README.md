@@ -4,3 +4,5 @@
 * Loading data directly into memory is not ideal; this would need to be revised; could we get guarantees on processing?
 * Want to explore multiprocessing to parallelize ingestion and computation; alternatively computing engine such as Spark
 * Wanted to try OOP -- please disect, criticise, comment on!
+* Simple profiling solution implemented; exploring better tools such as cProfile
+* Only basic tests provided
